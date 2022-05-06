@@ -77,7 +77,7 @@ foreach ($faqs as $value){
 
 <body>
     <!-- HEADER -->
-    <header class="border-bottom">
+    <header class="border-bottom sticky-top bg-white">
         <div class="container p-0 mx-4">
             <div class="row d-flex align-items-center">
                 <div class="col-3 d-flex align-items-center">
