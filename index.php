@@ -58,7 +58,7 @@ foreach ($faqs as $value){
     }
 
     .active{
-        border-bottom: 2px solid blue;
+        border-bottom: 3px solid #3367d6;
         color: blue;
     }
 
@@ -73,33 +73,39 @@ foreach ($faqs as $value){
     footer{
         background-color: #F5F5F5;
     }
+
+    .list-container{
+        border-bottom: 1px solid rgba(151,151,151,.5);
+    }
 </style>
 
 <body>
     <!-- HEADER -->
-    <header class="border-bottom sticky-top bg-white">
+    <header class="sticky-top bg-white">
         <div class="container p-0 mx-4">
             <div class="row d-flex align-items-center">
                 <div class="col-3 d-flex align-items-center">
-                    <img class="logo-img me-2" src="./asset/img/Google-logo.png" alt="">
-                    <h5 class="m-0 text-secondary">Privacy e termini</h5>
+                    <img class="logo-img me-2" src="./asset/img/Google-logo.png" alt="" role="button">
+                    <h5 class="m-0 text-secondary" role="button">Privacy e termini</h5>
                 </div>
                 <div class="col-6">
 
                 </div>
                 <div class="col-3 text-end">
-                    <i class="fa-solid fa-grip-vertical pe-3"></i>
-                    <i class="fa-solid fa-user"></i>
+                    <i class="fa-solid fa-grip-vertical pe-3" role="button"></i>
+                    <i class="fa-solid fa-user" role="button"></i>
                 </div>
             </div>
         </div>
-        <ul class="d-flex">
-            <li class="pe-4 text-secondary">Introduzione</li>
-            <li class="pe-4 text-secondary">Norme sulla privacy</li>
-            <li class="pe-4 text-secondary">Termini di servizio</li>
-            <li class="pe-4 text-secondary">Tecnologie</li>
-            <li class="active text-center">Domande frequenti</li>
-        </ul>
+        <div class="list-container">
+            <ul class="d-flex p-0 mb-0 mx-4 text-secondary">
+                <li class="pe-4" role="button">Introduzione</li>
+                <li class="pe-4" role="button">Norme sulla privacy</li>
+                <li class="pe-4" role="button">Termini di servizio</li>
+                <li class="pe-4" role="button">Tecnologie</li>
+                <li class="active text-center pb-3"><a href="#">Domande frequenti</a></li>
+            </ul>
+        </div>   
     </header>
     <!-- MAIN -->
     <main class="py-5">
@@ -113,14 +119,14 @@ foreach ($faqs as $value){
         <div class="container footer-container">
             <div class="row d-flex align-items-center">
                 <div class="col-4 p-0">
-                    <ul class="d-flex align-items-center mini-font p-0 m-0">
-                        <li class="pe-1">Google</li>
+                    <ul class="d-flex align-items-center mini-font p-0 m-0 text-secondary">
+                        <li class="pe-1" role="button" >Google</li>
                         <li class="pe-1">&middot</li>
-                        <li class="pe-1">Tutto su Google</li>
+                        <li class="pe-1" role="button">Tutto su Google</li>
                         <li class="pe-1">&middot</li>
-                        <li class="pe-1">Privacy</li>
+                        <li class="pe-1" role="button">Privacy</li>
                         <li class="pe-1">&middot</li>
-                        <li class="pe-1">Termini</li>
+                        <li class="pe-1" role="button">Termini</li>
                     </ul>
                 </div>
                 <div class="col-4">
