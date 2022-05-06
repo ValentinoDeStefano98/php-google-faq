@@ -110,8 +110,10 @@ foreach ($faqs as $value){
     <!-- MAIN -->
     <main class="py-5">
         <?php foreach ($faqs as $value){ ?>
-            <h4 class="pb-3"> <?php echo $value['question'] ?> </h4>
-            <p class="mini-font"> <?php echo $value['answer'] ?> </p>
+            <div class="py-5">
+                <h4 class="pb-3"> <?php echo $value['question'] ?> </h4>
+                <p class="mini-font"> <?php echo $value['answer'] ?> </p>
+            </div>
         <?php } ?>
     </main>
     <!-- FOOTER -->
