@@ -32,12 +32,67 @@ foreach ($faqs as $value){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <title>Google</title>
 </head>
+
+<style>
+    html{
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+
+    main{
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .logo-img{
+        max-width: 30%;
+    }
+
+    ul{
+        list-style-type: none;
+    }
+
+    .active{
+        border-bottom: 2px solid blue;
+        color: blue;
+    }
+</style>
+
 <body>
-    <?php foreach ($faqs as $value){ ?>
-        <h2> <?php echo $value['question'] ?> </h2>
-        <p> <?php echo $value['answer'] ?> </p>
-    <?php } ?>
+    <header class="border-bottom">
+        <div class="container p-0 mx-4">
+            <div class="row d-flex align-items-center">
+                <div class="col-3 d-flex align-items-center">
+                    <img class="logo-img me-2" src="./asset/img/Google-logo.png" alt="">
+                    <h5 class="m-0 text-secondary">Privacy e termini</h5>
+                </div>
+                <div class="col-6">
+
+                </div>
+                <div class="col-3 text-end">
+                    <i class="fa-solid fa-grip-vertical pe-3"></i>
+                    <i class="fa-solid fa-user"></i>
+                </div>
+            </div>
+        </div>
+        <ul class="d-flex">
+            <li class="pe-4">Introduzione</li>
+            <li class="pe-4">Norme sulla privacy</li>
+            <li class="pe-4">Termini di servizio</li>
+            <li class="pe-4">Tecnologie</li>
+            <li class="active text-center">Domande frequenti</li>
+        </ul>
+    </header>
+    <main class="py-5">
+        <?php foreach ($faqs as $value){ ?>
+            <h2> <?php echo $value['question'] ?> </h2>
+            <p> <?php echo $value['answer'] ?> </p>
+        <?php } ?>
+    </main>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </html>
