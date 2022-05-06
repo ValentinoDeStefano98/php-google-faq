@@ -43,7 +43,8 @@ foreach ($faqs as $value){
         margin: 0 auto;
     }
 
-    main{
+    main,
+    .footer-container{
         width: 70%;
         margin: 0 auto;
     }
@@ -64,9 +65,18 @@ foreach ($faqs as $value){
     a{
         text-decoration: none;
     }
+
+    .mini-font{
+        font-size: 0.8em;
+    }
+
+    footer{
+        background-color: #F5F5F5;
+    }
 </style>
 
 <body>
+    <!-- HEADER -->
     <header class="border-bottom">
         <div class="container p-0 mx-4">
             <div class="row d-flex align-items-center">
@@ -91,12 +101,42 @@ foreach ($faqs as $value){
             <li class="active text-center">Domande frequenti</li>
         </ul>
     </header>
+    <!-- MAIN -->
     <main class="py-5">
         <?php foreach ($faqs as $value){ ?>
-            <h3 class="pb-3"> <?php echo $value['question'] ?> </h3>
-            <p> <?php echo $value['answer'] ?> </p>
+            <h4 class="pb-3"> <?php echo $value['question'] ?> </h4>
+            <p class="mini-font"> <?php echo $value['answer'] ?> </p>
         <?php } ?>
     </main>
+    <!-- FOOTER -->
+    <footer>
+        <div class="container footer-container">
+            <div class="row d-flex align-items-center">
+                <div class="col-4 p-0">
+                    <ul class="d-flex align-items-center mini-font p-0 m-0">
+                        <li class="pe-1">Google</li>
+                        <li class="pe-1">&middot</li>
+                        <li class="pe-1">Tutto su Google</li>
+                        <li class="pe-1">&middot</li>
+                        <li class="pe-1">Privacy</li>
+                        <li class="pe-1">&middot</li>
+                        <li class="pe-1">Termini</li>
+                    </ul>
+                </div>
+                <div class="col-4">
+
+                </div>
+                <div class="col-4 d-flex align-items-center p-2 justify-content-end">
+                    <i class="fa-solid fa-language fs-4 pe-2"></i>
+                    <select class="form-select w-50" aria-label="Languages">
+                        <option selected value="italian">Italiano</option>
+                        <option value="english">English</option>
+                        <option value="spanish">Spanish</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </html>
